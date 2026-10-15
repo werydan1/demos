@@ -1,0 +1,128 @@
+<!doctype html>
+
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Salmon Farming</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- container -->
+
+        <header class="row">
+            <!-- start header -->
+
+            <nav>
+
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand">what do you want to know?</a>
+                        <form class="d-flex" role="search" action="https://www.google.com/search" method="get"
+                            target="_blank">
+                            <input class="form-control me-2" type="search" name="q" placeholder="Search"
+                                aria-label="Search" required />
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+
+            </nav>
+
+            <!-- end header -->
+        </header>
+
+        <section class="row">
+            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">WHAT YOUR NAME</h1>
+                    <p class="col-md-8 fs-4">all work no play makes jack a dull boy. all work no play makes jack a dull
+                        boy. all work no play makes jack a dull boy. all work no play makes jack a dull boy. all work no
+                        play makes jack a dull boy. all work no play makes jack a dull boy. all work no play makes jack
+                        a dull boy. </p>
+
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                        <button class="btn btn-danger btn-lg" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#btn2" aria-expanded="false" aria-controls="btn2">
+                            All work no play
+                        </button>
+
+                        <div class="collapse" id="btn2">
+                            <button class="btn btn-warning btn-lg" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#btn3" aria-expanded="false" aria-controls="btn3">
+                                Makes Jack
+                            </button>
+                        </div>
+
+                        <div class="collapse" id="btn3">
+                            <button class="btn btn-success btn-lg" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#revealImg" aria-expanded="false" aria-controls="revealImg">
+                                A dull boy
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="collapse mt-4" id="revealImg">
+                        <img src="images/allwork.jpeg" class="img-fluid rounded-3"
+                            alt="A piece of paper with 'All work no play makes jack a dull boy' written a million times on it">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="row">
+            <!-- start footer -->
+
+            <div class="col-3">
+
+                all work no play
+
+            </div>
+
+            <div class="col-6">
+
+                makes jack
+
+            </div>
+
+            <div class="col-3">
+
+                a dull boy
+
+            </div>
+
+            <!-- end footer -->
+        </footer>
+
+        <!-- end container-->
+    </div>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Closing a button also closes everything after it in the chain
+        document.getElementById('btn2').addEventListener('hide.bs.collapse', () => {
+            bootstrap.Collapse.getOrCreateInstance('#btn3').hide();
+        });
+        document.getElementById('btn3').addEventListener('hide.bs.collapse', () => {
+            bootstrap.Collapse.getOrCreateInstance('#revealImg').hide();
+        });
+    </script>
+</body>
+
+</html>
